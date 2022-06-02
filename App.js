@@ -4,6 +4,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import VocabDetailScreen from './src/containers/VocabDetailScreen/Index.js';
 import {NativeBaseProvider} from 'native-base';
+import HomeScreen from './src/containers/HomeScreen/Index.js';
 const App = () => {
   const Stack = createNativeStackNavigator();
 
@@ -11,6 +12,11 @@ const App = () => {
     <NativeBaseProvider>
       <NavigationContainer>
         <Stack.Navigator>
+          <Stack.Screen
+            name="Home"
+            component={HomeScreen}
+            options={{title: 'Home'}}
+          />
           <Stack.Screen
             name="Vocabs"
             component={Vocabs}

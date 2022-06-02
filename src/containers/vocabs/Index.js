@@ -7,6 +7,7 @@ import {
   Text,
   VStack,
   Button,
+  Container,
 } from 'native-base';
 import React, {useState} from 'react';
 import {StyleSheet, TouchableOpacity, VirtualizedList} from 'react-native';
@@ -69,8 +70,8 @@ const Vocabs = props => {
   };
 
   return (
-    <Center flex={1} px="0">
-      <Stack w="80%" mb={3}>
+    <Stack alignItems="center">
+      <Stack w="80%" my={3}>
         {alert ? (
           <Alert status="info" colorScheme="info">
             {alert}
@@ -114,7 +115,7 @@ const Vocabs = props => {
           })}
         />
       </Stack>
-    </Center>
+    </Stack>
   );
 };
 
